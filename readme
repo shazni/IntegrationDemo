@@ -4,10 +4,17 @@ mvn clean install -Dmicroservice.host.port="http://localhost:9090" -Ddb.url="jdb
 
 mvn clean install -Dmicroservice.host.port="https://wso2demo4574-ceppublish.wso2apps.com" -Ddb.url="jdbc:mysql://mysql.storage.cloud.wso2.com:3306/integration_demo_wso2demo4574" -Ddb.user="sha_rACKhawA" -Ddb.pwd="20071558_Nazeer" -Daccountdetails.host.port="https://wso2demo4574-integrationdemo.wso2apps.com/accountinfo"
 
+Integration Demo project
+
+mvn clean install -Dmicroservice.host.port="http://localhost:9090" -Daccountdetails.host.port="http://localhost:8282/accountinfo"
+
+mvn clean install -Dmicroservice.host.port="https://wso2demo4574-ceppublish.wso2apps.com" -Daccountdetails.host.port="https://wso2demo4574-integrationdemo.wso2apps.com/accountinfo"
+
 data service project
 
 mvn clean install -Ddb.url="jdbc:mysql://localhost:3306/integration_demo" -Ddb.user="root" -Ddb.pwd="root"
-mvn clean install -Ddb.url="dbc:mysql://mysql.storage.cloud.wso2.com:3306/integration_demo_wso2demo4574" -Ddb.user="sha_rACKhawA" -Ddb.pwd="20071558_Nazeer"
+
+mvn clean install -Ddb.url="jdbc:mysql://mysql.storage.cloud.wso2.com:3306/integration_demo_wso2demo4574" -Ddb.user="sha_rACKhawA" -Ddb.pwd="20071558_Nazeer"
 
 --------------------------------------------------------------------------------------------------------------------
 
