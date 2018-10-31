@@ -9,7 +9,6 @@
   <name>IntegrationESBCompositeApp</name>
   <description>IntegrationESBCompositeApp</description>
   <properties>
-    <com.wso2.Integration.demo.data.service.dataservice_._AccountDetailsDataService>capp/DataServicesServer</com.wso2.Integration.demo.data.service.dataservice_._AccountDetailsDataService>
     <com.wso2.Integration.demo.esb.endpoint_._StockInfoEp>capp/EnterpriseServiceBus</com.wso2.Integration.demo.esb.endpoint_._StockInfoEp>
     <com.wso2.Integration.registry.artifacts.resource_._ConvertAccountConfig_inputSchema>capp/EnterpriseServiceBus</com.wso2.Integration.registry.artifacts.resource_._ConvertAccountConfig_inputSchema>
     <com.wso2.Integration.demo.esb.api_._ConvertAccountDetails>capp/EnterpriseServiceBus</com.wso2.Integration.demo.esb.api_._ConvertAccountDetails>
@@ -61,12 +60,6 @@
       <artifactId>SendToQueue</artifactId>
       <version>1.0.0</version>
       <type>xml</type>
-    </dependency>
-    <dependency>
-      <groupId>com.wso2.Integration.demo.data.service.dataservice</groupId>
-      <artifactId>AccountDetailsDataService</artifactId>
-      <version>1.0.0</version>
-      <type>dbs</type>
     </dependency>
     <dependency>
       <groupId>com.wso2.Integration.demo.esb.api</groupId>
@@ -188,7 +181,7 @@
               <trustStorePath>${basedir}/src/main/resources/security/wso2carbon.jks</trustStorePath>
               <trustStorePassword>wso2carbon</trustStorePassword>
               <trustStoreType>JKS</trustStoreType>
-              <serverUrl>https://localhost:9443</serverUrl>
+              <serverUrl>https://localhost:9445</serverUrl>
               <userName>admin</userName>
               <password>admin</password>
               <operation>deploy</operation>

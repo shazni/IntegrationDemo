@@ -1,0 +1,92 @@
+***REMOVED***
+
+mvn clean install -Dmicroservice.host.port="http://localhost:9090" -Ddb.url="jdbc:mysql://localhost:3306/integration_demo" -Ddb.user="root" -Ddb.pwd="root" -Daccountdetails.host.port="http://localhost:8282/accountinfo"
+
+mvn clean install -Dmicroservice.host.port="https://wso2demo4574-ceppublish.wso2apps.com" -Ddb.url="jdbc:mysql://mysql.storage.cloud.wso2.com:3306/integration_demo_wso2demo4574" -Ddb.user="sha_rACKhawA" -Ddb.pwd="20071558_Nazeer" -Daccountdetails.host.port="https://wso2demo4574-integrationdemo.wso2apps.com/accountinfo"
+
+***REMOVED***
+
+mvn clean install -Ddb.url="jdbc:mysql://localhost:3306/integration_demo" -Ddb.user="root" -Ddb.pwd="root"
+mvn clean install -Ddb.url="dbc:mysql://mysql.storage.cloud.wso2.com:3306/integration_demo_wso2demo4574" -Ddb.user="sha_rACKhawA" -Ddb.pwd="20071558_Nazeer"
+
+***REMOVED***
+
+***REMOVED***
+
+***REMOVED***
+
+curl -v -k ***REMOVED***/event -d "text=shazni"
+
+curl -v -k ***REMOVED***
+
+***REMOVED***
+
+***REMOVED***
+
+
+
+***REMOVED***
+
+***REMOVED***
+
+***REMOVED***
+
+***REMOVED***
+
+***REMOVED***
+
+
+***REMOVED***
+
+
+***REMOVED***
+
+***REMOVED***
+
+***REMOVED***
+
+
+
+
+***REMOVED***
+
+
+***REMOVED***
+
+
+***REMOVED***
+***REMOVED***
+
+***REMOVED***
+***REMOVED***
+
+
+***REMOVED***
+
+***REMOVED***
+
+
+
+***REMOVED***
+
+***REMOVED***
+
+curl -c /tmp/cookie -X POST -k "https://integration.cloud.wso2.com/appmgt/site/blocks/user/login/ajax/login.jag" -d "action=login&userName=shazni@wso2.com@wso2demo4574&password=20071558_Shazni"
+
+***REMOVED***
+
+***REMOVED***
+
+***REMOVED***
+
+***REMOVED***
+curl -b /tmp/cookie -X POST https://integration.cloud.wso2.com/appmgt/site/blocks/application/application.jag -F action=deleteApplication -F applicationKey=***REMOVED***
+
+***REMOVED***
+***REMOVED***
+
+
+
+
+
+
