@@ -44,6 +44,18 @@
                         <args/>
                     </payloadFactory>
                 </case>
+                <case regex="999">
+                    <payloadFactory media-type="xml">
+                        <format>
+                            <account_details xmlns="">
+                                <first_name>Tim</first_name>
+                                <last_name>Cook</last_name>
+                                <account_type>Savings</account_type>
+                            </account_details>
+                        </format>
+                        <args/>
+                    </payloadFactory>
+                </case>
                 <default>
                     <payloadFactory media-type="xml">
                         <format>
