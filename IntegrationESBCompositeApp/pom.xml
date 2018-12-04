@@ -8,6 +8,18 @@
   <packaging>carbon/application</packaging>
   <name>IntegrationESBCompositeApp</name>
   <description>IntegrationESBCompositeApp</description>
+  <distributionManagement>
+    <repository>
+      <id>prime-nexus-releases</id>
+      <name>Internal Prime Releases</name>
+      <url>http://mklacm012p:8081/repository/WSO2-Release/</url>
+    </repository>
+    <snapshotRepository>
+      <id>prime-nexus-snapshots</id>
+      <name>Internal Prime Snapshots</name>
+      <url>http://mklacm012p:8081/repository/WSO2-snapshot/</url>
+    </snapshotRepository>
+  </distributionManagement>
   <properties>
     <com.wso2.Integration.demo.esb.endpoint_._StockInfoEp>capp/EnterpriseServiceBus</com.wso2.Integration.demo.esb.endpoint_._StockInfoEp>
     <com.wso2.Integration.registry.artifacts.resource_._ConvertAccountConfig_inputSchema>capp/EnterpriseServiceBus</com.wso2.Integration.registry.artifacts.resource_._ConvertAccountConfig_inputSchema>
@@ -181,9 +193,10 @@
               <trustStorePath>${basedir}/src/main/resources/security/wso2carbon.jks</trustStorePath>
               <trustStorePassword>wso2carbon</trustStorePassword>
               <trustStoreType>JKS</trustStoreType>
-              <serverUrl>https://localhost:9445</serverUrl>
-              <userName>admin</userName>
-              <password>admin</password>
+              <serverUrl>https://localhost:9443</serverUrl>
+              <serverUrl>https://localhost:9443/t/storekeeper.com</serverUrl>
+              <userName>shazni@storekeeper.com</userName>
+              <password>xxxxxx</password>
               <operation>deploy</operation>
             </CarbonServer>
           </carbonServers>
