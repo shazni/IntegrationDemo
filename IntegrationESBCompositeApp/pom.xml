@@ -193,7 +193,6 @@
               <trustStorePath>${basedir}/src/main/resources/security/wso2carbon.jks</trustStorePath>
               <trustStorePassword>wso2carbon</trustStorePassword>
               <trustStoreType>JKS</trustStoreType>
-              <serverUrl>https://localhost:9443</serverUrl>
               <serverUrl>https://localhost:9443/t/storekeeper.com</serverUrl>
               <userName>shazni@storekeeper.com</userName>
               <password>xxxxxx</password>
