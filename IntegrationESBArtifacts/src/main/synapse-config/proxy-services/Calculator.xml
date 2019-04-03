@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<proxy name="Calculator" serviceGroup="" startOnLoad="true" transports="https http" xmlns="http://ws.apache.org/ns/synapse">
+    <target>
+        <endpoint name="endpoint_urn_uuid_1FF78996948B9A0B6E14565751214774-1218279313">
+            <wsdl port="CalculatorSoap" service="Calculator" uri="http://www.dneonline.com/calculator.asmx?WSDL"/>
+        </endpoint>
+        <inSequence/>
+        <outSequence>
+            <send/>
+        </outSequence>
+        <faultSequence/>
+    </target>
+    <publishWSDL preservePolicy="true" uri="http://www.dneonline.com/calculator.asmx?WSDL"/>
+    <policy key="gov:ws-policy/integration_sec_policy.xml"/>
+    <enableSec/>
+</proxy>

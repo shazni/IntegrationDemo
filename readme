@@ -16,6 +16,8 @@ mvn clean install -Ddb.url="jdbc:mysql://localhost:3306/integration_demo" -Ddb.u
 
 mvn clean install -Ddb.url="jdbc:mysql://mysql.storage.cloud.wso2.com:3306/integration_demo_wso2demo4574" -Ddb.user="cloud_db_username" -Ddb.pwd="cloud_db_pwd"
 
+mvn clean deploy -Dmaven.deploy.skip=true -Dmaven.car.deploy.skip=false
+
 --------------------------------------------------------------------------------------------------------------------
 
 mvn clean install -Dmicroservice.host.port="wso2demo4574-ceppublish.wso2apps.com"
