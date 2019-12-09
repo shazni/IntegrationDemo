@@ -30,6 +30,8 @@
     <com.wso2.Integration.demo.esb.api_._EasyTransformXSLT>capp/EnterpriseServiceBus</com.wso2.Integration.demo.esb.api_._EasyTransformXSLT>
     <com.wso2.Integration.demo.esb.api_._ConvertAccountDetails>capp/EnterpriseServiceBus</com.wso2.Integration.demo.esb.api_._ConvertAccountDetails>
     <com.wso2.Integration.registry.artifacts.resource_._remove-namespace_xslt>capp/EnterpriseServiceBus</com.wso2.Integration.registry.artifacts.resource_._remove-namespace_xslt>
+    <com.wso2.Integration.demo.esb.proxy-service_._CalculatorUnsecured>capp/EnterpriseServiceBus</com.wso2.Integration.demo.esb.proxy-service_._CalculatorUnsecured>
+    <com.wso2.Integration.demo.esb.proxy-service_._RuleTest>capp/EnterpriseServiceBus</com.wso2.Integration.demo.esb.proxy-service_._RuleTest>
     <com.wso2.Integration.demo.esb.proxy-service_._Calculator>capp/EnterpriseServiceBus</com.wso2.Integration.demo.esb.proxy-service_._Calculator>
     <com.wso2.Integration.demo.esb.api_._StockInfo>capp/EnterpriseServiceBus</com.wso2.Integration.demo.esb.api_._StockInfo>
     <com.wso2.Integration.demo.esb.api_._OrderStatus>capp/EnterpriseServiceBus</com.wso2.Integration.demo.esb.api_._OrderStatus>
@@ -40,6 +42,7 @@
     <com.wso2.Integration.registry.artifacts.resource_._ConvertAccountConfig_outputSchema>capp/EnterpriseServiceBus</com.wso2.Integration.registry.artifacts.resource_._ConvertAccountConfig_outputSchema>
     <com.wso2.Integration.demo.Integration.connectors.lib_._fileconnector-connector>capp/EnterpriseServiceBus</com.wso2.Integration.demo.Integration.connectors.lib_._fileconnector-connector>
     <com.wso2.Integration.registry.artifacts.resource_._ConvertAccountConfig>capp/EnterpriseServiceBus</com.wso2.Integration.registry.artifacts.resource_._ConvertAccountConfig>
+    <com.wso2.Integration.demo.esb.proxy-service_._RuleMediatorTest>capp/EnterpriseServiceBus</com.wso2.Integration.demo.esb.proxy-service_._RuleMediatorTest>
   </properties>
   <dependencies>
     <dependency>
@@ -150,6 +153,24 @@
       <version>1.0.0</version>
       <type>zip</type>
     </dependency>
+    <dependency>
+      <groupId>com.wso2.Integration.demo.esb.proxy-service</groupId>
+      <artifactId>RuleMediatorTest</artifactId>
+      <version>1.0.0</version>
+      <type>xml</type>
+    </dependency>
+    <dependency>
+      <groupId>com.wso2.Integration.demo.esb.proxy-service</groupId>
+      <artifactId>RuleTest</artifactId>
+      <version>1.0.0</version>
+      <type>xml</type>
+    </dependency>
+    <dependency>
+      <groupId>com.wso2.Integration.demo.esb.proxy-service</groupId>
+      <artifactId>CalculatorUnsecured</artifactId>
+      <version>1.0.0</version>
+      <type>xml</type>
+    </dependency>
   </dependencies>
   <repositories>
     <repository>
@@ -228,11 +249,8 @@
               <trustStorePath>${basedir}/src/main/resources/security/wso2carbon.jks</trustStorePath>
               <trustStorePassword>wso2carbon</trustStorePassword>
               <trustStoreType>JKS</trustStoreType>
-              <!--<serverUrl>https://localhost:9443/t/storekeeper.com</serverUrl>-->
-              <serverUrl>https://localhost:9445</serverUrl>
-              <!--<userName>shazni@storekeeper.com</userName>-->
+              <serverUrl>https://localhost:9443</serverUrl>
               <userName>admin</userName>
-              <!--<password>xxxxxx</password>-->
               <password>admin</password>
               <operation>deploy</operation>
             </CarbonServer>

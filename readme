@@ -1,14 +1,14 @@
 Integration Demo
 
-mvn clean install -Dmicroservice.host.port="http://localhost:9090" -Ddb.url="jdbc:mysql://localhost:3306/integration_demo" -Ddb.user="your_db_user_name" -Ddb.pwd="your_db_pwd" -Daccountdetails.host.port="http://localhost:8282/accountinfo"
+mvn clean install -Dmicroservice.host.port="http://localhost:9090" -Ddb.url="jdbc:mysql://localhost:3306/integration_demo" -Ddb.user="your_db_user_name" -Ddb.pwd="your_db_pwd" -Daccountdetails.host.port="http://localhost:8280/accountinfo" -Dftp.copy.enabled="false"
 
-mvn clean install -Dmicroservice.host.port="https://wso2demo4574-ceppublish.wso2apps.com" -Ddb.url="jdbc:mysql://mysql.storage.cloud.wso2.com:3306/integration_demo_wso2demo4574" -Ddb.user="db_cloud_user_name" -Ddb.pwd="db_cloud_pwd" -Daccountdetails.host.port="https://wso2demo4574-integrationdemo.wso2apps.com/accountinfo"
+mvn clean install -Dmicroservice.host.port="https://wso2demo4574-ceppublish.wso2apps.com" -Ddb.url="jdbc:mysql://mysql.storage.cloud.wso2.com:3306/integration_demo_wso2demo4574" -Ddb.user="db_cloud_user_name" -Ddb.pwd="db_cloud_pwd" -Daccountdetails.host.port="https://wso2demo4574-integrationdemo.wso2apps.com/accountinfo" -Dftp.copy.enabled="false"
 
 Integration Demo project
 
-mvn clean install -Dmicroservice.host.port="http://localhost:9090" -Daccountdetails.host.port="http://localhost:8282/accountinfo"
+mvn clean install -Dmicroservice.host.port="http://localhost:9090" -Daccountdetails.host.port="http://localhost:8280/accountinfo" -Dftp.copy.enabled="false"
 
-mvn clean install -Dmicroservice.host.port="https://wso2demo4574-ceppublish.wso2apps.com" -Daccountdetails.host.port="https://wso2demo4574-integrationdemo.wso2apps.com/accountinfo"
+mvn clean install -Dmicroservice.host.port="https://wso2demo4574-ceppublish.wso2apps.com" -Daccountdetails.host.port="https://wso2demo4574-integrationdemo.wso2apps.com/accountinfo" -Dftp.copy.enabled="false"
 
 data service project
 
@@ -17,6 +17,18 @@ mvn clean install -Ddb.url="jdbc:mysql://localhost:3306/integration_demo" -Ddb.u
 mvn clean install -Ddb.url="jdbc:mysql://mysql.storage.cloud.wso2.com:3306/integration_demo_wso2demo4574" -Ddb.user="cloud_db_username" -Ddb.pwd="cloud_db_pwd"
 
 mvn clean deploy -Dmaven.deploy.skip=true -Dmaven.car.deploy.skip=false
+
+
+/// SFTP and SAMBA
+
+<source>smb://shazni:shazni_nazeer@localhost/inboundFiles/stock_data.txt</source>
+
+                    <fileconnector.create>
+                        <!-- <source>sftp://newyorkunidev:XzKbMdnkVrhds#wso2@ftp.support.wso2.com:22/newyorkunidev/demo/stock_data.txt</source>-->
+                        <source>sftp://newyorkunidev:XzKbMdnkVrhds%23wso2@ftp.support.wso2.com:22/newyorkunidev/demo/stock_data.txt</source>
+                        <!-- <source>smb://shazni:shazni_nazeer@localhost/inboundFiles/stock_data.txt</source>-->
+                        <inputContent>{$ctx:BODY}</inputContent>
+                    </fileconnector.create>
 
 --------------------------------------------------------------------------------------------------------------------
 

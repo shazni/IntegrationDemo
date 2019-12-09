@@ -188,6 +188,10 @@
               <token>@AccountDetailHostPort</token>
               <value>${accountdetails.host.port}</value>
             </replacement>
+            <replacement>
+              <token>@FTPCopyEnabled</token>
+              <value>${ftp.copy.enabled}</value>
+            </replacement>
           </replacements>
         </configuration>
       </plugin>
